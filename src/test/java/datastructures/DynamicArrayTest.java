@@ -1,16 +1,17 @@
 package datastructures;
 
+import exercise.datastructure.DynamicArrayJava;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 public class DynamicArrayTest {
 
-    private DynamicArray array;
+    private DynamicArrayJava array;
 
     @Before
     public void SetUp() {
-        array = new DynamicArray<String>(2);
+        array = new DynamicArrayJava<String>(2);
     }
 
     @Test
@@ -56,8 +57,8 @@ public class DynamicArrayTest {
 
     @Test
     public void Contains()  {
-        Assert.assertFalse(array.Contains("a"));
+        Assert.assertFalse(array.contains("a"));
         array.add("a");
-        Assert.assertTrue(array.Contains("a"));
+        Assert.assertTrue(array.contains("a"));
     }
 }
